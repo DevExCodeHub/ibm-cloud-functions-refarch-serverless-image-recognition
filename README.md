@@ -35,8 +35,6 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 * [IBM Cloud Functions CLI](https://console.bluemix.net/openwhisk/learn/cli) to create cloud functions from the terminal. Make sure you do the test action `ibmcloud wsk action invoke /whisk.system/utils/echo -p message hello --result` so that your `~/.wskprops` is pointing to the right account.
 
-* [Whisk Deploy _(wskdeploy)_](https://github.com/apache/incubator-openwhisk-wskdeploy) is a utility to help you describe and deploy any part of the OpenWhisk programming model using a Manifest file written in YAML. You'll use it to deploy all the Cloud Function resources using a single command. You can download it from the [releases page](https://github.com/apache/incubator-openwhisk-wskdeploy/releases) and select the appropriate file for your system.
-
 * Install [Node.js](https://nodejs.org/) if you want to use Electron.
 
 # Steps
@@ -60,51 +58,10 @@ Create a [Watson Visual Recognition](https://console.bluemix.net/catalog/service
 * Copy the API Key in the Credentials section and paste it in the `local.env` file in the value of `WATSON_VISUAL_APIKEY`
 
 ### 3. Deploy Cloud Functions
-> Choose one of the deployment methods
 
 ## Deploy through the IBM Cloud Functions console user interface
 
 Choose ["Start Creating"](https://console.bluemix.net/openwhisk/create) in the IBM Cloud Functions Dashboard. [Then proceed to this deployment instructions using the UI](README-Deploy-UI.md).
-
-You can also deploy them directly from the CLI by following the steps in the next section.
-
-## Deploy using the `wskdeploy` command line tool
-
-This approach deploy the Cloud Functions with one command driven by the runtime-specific manifest file available in this repository.
-
-Make sure you have the right environment variables in the `local.env` file. Export them in your terminal then deploy the Cloud Functions using `wskdeploy`. This uses the `manifest.yaml` file in this root directory.
-
-```
-$ source local.env
-$ wskdeploy
-```
-
-> You may want to undeploy them later with `wskdeploy undeploy`
-
-### 4. Launch Application
-
-Configure `web/scripts/upload.js`. Modify the lines for your Cloudant credentials.
-
-```js
-let usernameCloudant = "YOUR_CLOUDANT_USERNAME"
-let passwordCloudant = "YOUR_CLOUDANT_PASSWORD"
-```
-
-Run the Electron app or open the html file.
-
-* Electron:
-```
-$ npm install
-$ npm start
-```
-
-* _(or) Double-click `web/index.html`_
-
-# Sample output
-
-![sample-output](docs/screenshot.png)
-
-# Alternative Deployment Methods
 
 ### Deploy manually with the `ibmcloud wsk` command line tool
 
@@ -163,6 +120,29 @@ $ ibmcloud wsk trigger delete update-trigger
 $ ibmcloud wsk action delete update-document-with-watson
 $ ibmcloud wsk rule delete update-trigger-rule
 ```
+
+### 4. Launch Application
+
+Configure `web/scripts/upload.js`. Modify the lines for your Cloudant credentials.
+
+```js
+let usernameCloudant = "YOUR_CLOUDANT_USERNAME"
+let passwordCloudant = "YOUR_CLOUDANT_PASSWORD"
+```
+
+Run the Electron app or open the html file.
+
+* Electron:
+```
+$ npm install
+$ npm start
+```
+
+* _(or) Double-click `web/index.html`_
+
+# Sample output
+
+![sample-output](docs/screenshot.png)
 
 # Links
 
