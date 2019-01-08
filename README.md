@@ -66,15 +66,24 @@ Choose ["Start Creating"](https://console.bluemix.net/openwhisk/create) in the I
 ### Deploywith the `ibmcloud wsk` command line tool
 
 This approach shows you how to deploy individual the packages, actions, triggers, and rules with CLI commands. It helps you understand and control the underlying deployment artifacts.
-* After you install IBM `ibmcloud plugin install cloud-functions`
+
 
 * Export credentials
 ```
 $ source local.env
 ```
 * Login to IBM Cloud
-`ibmcloud login`
-
+```
+ibmcloud login
+```
+* then do
+```
+ibmcloud target --cf
+```
+* Install IBM Cloud Plugin
+```
+ibmcloud plugin install cloud-functions
+```
 * Create Cloudant Binding
 
 ```
