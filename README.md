@@ -80,7 +80,7 @@ ibmcloud login
 ```
 ibmcloud target --cf
 ```
-* Install IBM Cloud Plugin
+* Install IBM Cloud Functions Plugin
 ```
 ibmcloud plugin install cloud-functions
 ```
