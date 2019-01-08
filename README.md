@@ -59,10 +59,6 @@ Create a [Watson Visual Recognition](https://console.bluemix.net/catalog/service
 
 ### 3. Deploy Cloud Functions
 
-## Deploy through the IBM Cloud Functions console user interface
-
-Choose ["Start Creating"](https://console.bluemix.net/openwhisk/create) in the IBM Cloud Functions Dashboard. [Then proceed to this deployment instructions using the UI](README-Deploy-UI.md).
-
 ### Deploywith the `ibmcloud wsk` command line tool
 
 This approach shows you how to deploy individual the packages, actions, triggers, and rules with CLI commands. It helps you understand and control the underlying deployment artifacts.
