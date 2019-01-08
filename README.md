@@ -33,7 +33,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 # Prerequisites
 
-* [IBM Cloud Functions CLI](https://console.bluemix.net/openwhisk/learn/cli) to create cloud functions from the terminal. Make sure you do the test action `ibmcloud wsk action invoke /whisk.system/utils/echo -p message hello --result` so that your `~/.wskprops` is pointing to the right account.
+* [IBM Cloud Functions CLI](https://console.bluemix.net/openwhisk/learn/cli) to create cloud functions from the terminal. Make sure you do the test action `ibmcloud wsk action invoke /whisk.system/utils/echo -p message hello --result`.
 
 * Install [Node.js](https://nodejs.org/) if you want to use Electron.
 
@@ -63,14 +63,17 @@ Create a [Watson Visual Recognition](https://console.bluemix.net/catalog/service
 
 Choose ["Start Creating"](https://console.bluemix.net/openwhisk/create) in the IBM Cloud Functions Dashboard. [Then proceed to this deployment instructions using the UI](README-Deploy-UI.md).
 
-### Deploy manually with the `ibmcloud wsk` command line tool
+### Deploywith the `ibmcloud wsk` command line tool
 
 This approach shows you how to deploy individual the packages, actions, triggers, and rules with CLI commands. It helps you understand and control the underlying deployment artifacts.
+* After you install IBM `ibmcloud plugin install cloud-functions`
 
 * Export credentials
 ```
 $ source local.env
 ```
+* Login to IBM Cloud
+`ibmcloud login`
 
 * Create Cloudant Binding
 
