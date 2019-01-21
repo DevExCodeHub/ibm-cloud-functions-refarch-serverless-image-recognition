@@ -44,7 +44,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 Clone the `serverless-image-recognition` locally. In a terminal, run:
 
 ```
-$ git clone https://github.com/IBM/serverless-image-recognition
+$ git clone https://github.com/DevExCodeHub/ibm-cloud-functions-refarch-serverless-image-recognition
 ```
 
 ### 2. Create IBM Cloud Services
